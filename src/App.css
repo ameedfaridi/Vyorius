@@ -1,38 +1,184 @@
-.App {
+/*----------------------------------------NAVBAR------------------------------------------*/
+.nav-container {
+  margin-top: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+}
+
+.link-section {
+  text-align: left;
+  display: flex;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: 500;
+}
+
+.link-section a {
+  text-decoration: none;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 1rem;
+}
+
+.nav-btn-section {
+  text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.nav-btn-section .btn {
+  padding: 0;
+  font-size: 1rem;
+  width: 9rem;
+  height: 2.7rem;
+  margin: 1rem 4rem;
+  background-color: rgba(255, 69, 0);
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+}
+.DehazeIcon {
+  opacity: 0;
+  position: absolute;
+  right: 5%;
+  top: 1.3%;
+  padding: 5px 0;
+  cursor: pointer;
+}
+
+.bttn {
+  position: absolute;
+  right: 5%;
+  background: none;
+  outline: none;
+  border: none;
+  font-size: 1.5em;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  display: none;
+}
+/*----------------------------------------NAVBAR------------------------------------------*/
+
+/*----------------------------------------LEFTSIDE------------------------------------------*/
+.left-div {
+  margin-left: 2.5rem;
+}
+
+.left-div h1 {
+  font-size: 2.8rem;
+  margin-top: 0;
+}
+.left-div h4 {
+  margin-right: 2rem;
+  line-height: 1.5rem;
+  letter-spacing: 1px;
+  word-spacing: 3px;
+  margin-bottom: 3.5rem;
+}
+
+.leftSide-link {
+  text-decoration: none;
+  width: 9rem;
+  border: 1px solid rgba(255, 69, 0);
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 16px;
+  margin-right: 5px;
+  margin-bottom: 0.5rem;
+  padding: 1.5rem 4.5rem;
+  color: white;
+  background-color: rgba(255, 69, 0);
   text-align: center;
 }
+/*----------------------------------------LEFTSIDE------------------------------------------*/
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.App-container {
+  display: flex;
+  margin-top: 50px;
+}
+.map {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  z-index: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media only screen and (max-width: 1125px) {
+  .left-link-container {
+    display: flex;
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+  .map {
+    height: 40rem;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .nav-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .link-section {
+    display: none;
+  }
+  .nav-btn-section button {
+    display: none;
+  }
+  .logo-section {
+    height: 60px;
+  }
+  .DehazeIcon {
+    opacity: 1;
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .leftSide-link {
+    width: 5rem;
+  }
+  .left-div {
+    margin-left: 1rem;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  .App-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .left-div {
+    width: 90vw;
+    margin-bottom: 16rem;
+  }
+  .leftSide-link {
+    width: 10rem;
+    text-align: center;
+  }
+  .left-link-container {
+    margin-left: 1rem;
+    margin-right: 2rem;
+  }
+  .map {
+    width: 140%;
+    height: 25rem;
+    margin-left: 60px;
   }
 }
